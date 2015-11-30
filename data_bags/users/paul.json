@@ -1,0 +1,7 @@
+{
+  "id": "paul",
+  "shell": "\/bin\/bash",
+  "comment": "Paul Chicarello",
+  "groups": [ "sysadmin", "deploy" ],
+  "ssh_keys": [ "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDLRdOQiEvRJ1CUq2lhrL1vs9BboZDY3DSNR7OhBRHJ8+5Fq0Q04ZhfUsx2wa4nJKJ21ApwKFfUkor2JNnkKQPvHBNvLBoPYA6z4BFh2e2duskO/rGL8TaTTGhMfg7dEOVCTb5bqz9/+hq7obO2qFTASjIu9pFDu830aD7RTvt+NVoOO8Cvi/bVzf9kWmatN9i/cp+VeBCeMi0B0N1/9CLyHzewMApo9XhB01rD1j9njBeHK2h6Tid6JiOLh2kELTO5vAM7X82F/8lhzH8jCvcNjNrOjsPGxojvALdVwyx8j2cz+01EWpR2H1MZnWTbdA4aLE4pHsSdT8Ia8vKgm9XDTfVYU1L1Sv5ZSwBrvfoRKuu3irqonIA1o6pGWHT+Qs1F0ieot9mCGaU8YyMbok/u7pTwhPBCd/PwxiVybLglEitLQ3eVOyt9pRHgFYf7ZuDuZQmY2OtnpM0ojhqwGsCCOd3X/0r4GBrCDqMuOWm2mDrWyj3dfn3x/7K2J43IxEyY28X+Oqr7/kjw9DNgh2p80v/CXxBFPsMwF1pHdd3ssUTp1nVWPLRh+r4HQigxKbjhiMS/ZdM3AeCvX3XwDOkTDOzynaNDQdMbCSt8nxDSHglLwto5ykYZ7dAMNfuDl6zScgA2gZ3ADJAqTKGyzaZrekpyRY5lKl/6RNZF4O14UQ== pchicarello@patientslikeme" ]
+}
