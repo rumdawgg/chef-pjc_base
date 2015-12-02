@@ -4,8 +4,7 @@
 #
 # Copyright (c) 2015 Paul Chicarello
 
-# include_recipe "chef-client"
-# include_recipe "chef-client::delete_validation"
+include_recipe "chef-client"
 
 node.packages.each do |pkg|  
     package pkg

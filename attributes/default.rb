@@ -2,7 +2,9 @@
 # Attributes
 #
 
-default.packages = %w(vim git rsync telnet tcpdump postfix wget curl ca-certificates nfs-utils openssh-clients epel-release mlocate )
+default.packages = %w(vim git rsync telnet tcpdump postfix wget curl ca-certificates mlocate )
+default.rhel_packages = %w(vim git rsync telnet tcpdump postfix wget curl ca-certificates nfs-utils openssh-clients epel-release mlocate )
+default.deb_packages = %w(vim git rsync telnet tcpdump postfix wget curl ca-certificates nfs-utils openssh-clients epel-release mlocate )
 
 default['build-essential']['compile_time'] = true
 
