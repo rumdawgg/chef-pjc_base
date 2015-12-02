@@ -6,8 +6,19 @@
 
 include_recipe "chef-client"
 
-node.packages.each do |pkg|  
-    package pkg
+case node[:platform]
+  when "centos"
+    node.rhel_packages.each do |pkg|  
+        package pkg
+    end
+  when "debian"
+    node.deb_packages.each do |pkg|  
+        package pkg
+    end
+  when "ubuntu"
+    node.deb_packages.each do |pkg|  
+        package pkg
+    end
 end
 
 include_recipe 'openssh'  
