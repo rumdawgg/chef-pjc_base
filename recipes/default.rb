@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2015 Paul Chicarello
 
-include_recipe "chef-client"
+#include_recipe "chef-client"
 
 case node[:platform]
   when "centos"
