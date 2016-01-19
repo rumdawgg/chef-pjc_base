@@ -24,6 +24,7 @@ end
 include_recipe 'openssh'  
 include_recipe 'build-essential::default'
 include_recipe 'users'
+include_recipe 'homelan::motd'
 
 users_manage "sysadmin" do
   action [ :remove, :create ]
