@@ -1,4 +1,5 @@
 
 <%= node['fqdn'].upcase %>
-<%= figlet[node['fqdn']] %>
+<% font = Artii::Base.new :font => 'big' -%>
+<%= font.asciify(node['fqdn']) %>
 For Official Use Only.
