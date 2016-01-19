@@ -11,7 +11,4 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[homelan::default]
-      - recipe[homelan::ruby]
-      - recipe[homelan::railsapp]
-      - recipe[homelan::wwwapp]
+      - recipe[homelan::motd]
