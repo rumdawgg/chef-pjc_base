@@ -1,5 +1,6 @@
 
-<%= node['fqdn'].upcase %>
+<%= node.fqdn.upcase %>
 <% font = Artii::Base.new :font => 'big' -%>
-<%= font.asciify(node['fqdn']) %>
+<%= font.asciify(node.name) %>
 For Official Use Only.
+

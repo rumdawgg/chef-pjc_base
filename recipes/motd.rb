@@ -5,7 +5,7 @@
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
 chef_gem "artii" do
-	action :install
+	compile_time true
 end
 
 require "artii"
