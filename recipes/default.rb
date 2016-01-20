@@ -21,6 +21,7 @@ case node[:platform]
     end
 end
 
+include_recipe 'homelan::hosts'
 include_recipe 'openssh'  
 include_recipe 'build-essential::default'
 include_recipe 'users'
