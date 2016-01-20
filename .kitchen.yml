@@ -10,5 +10,7 @@ platforms:
 
 suites:
   - name: default
+    driver:
+      vm_hostname: kitchen.lan.chicarello.com
     run_list:
-      - recipe[homelan::motd]
+      - recipe[homelan::default]
