@@ -21,11 +21,11 @@ case node[:platform]
     end
 end
 
+include_recipe 'build-essential'
 include_recipe 'homelan::hosts'
-include_recipe 'openssh'  
-include_recipe 'build-essential::default'
-include_recipe 'users'
 include_recipe 'homelan::motd'
+#include_recipe 'openssh'
+include_recipe 'users'
 include_recipe 'sudo'
 
 users_manage "sysadmin" do
