@@ -4,7 +4,7 @@ maintainer_email 	'paul@chicarello.com'
 license 			'All rights reserved'
 description 		'Configures a node on the lan.chicarello.com domain'
 long_description 	'Configures a node on the lan.chicarello.com domain'
-version 			'0.1.21'
+version 			'0.1.24'
 
 depends "chef-client"
 depends "users"

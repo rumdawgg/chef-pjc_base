@@ -6,7 +6,7 @@ default.rhel_packages = %w(vim git rsync telnet tcpdump postfix wget curl ca-cer
 default.deb_packages = %w(vim git rsync telnet tcpdump postfix wget curl ca-certificates nfs-common mlocate software-properties-common screen)
 
 default['build-essential']['compile_time'] = true
-
+default['authorization']['sudo']['include_sudoers_d'] = true
 default.openssh.server.permit_root_login = 'without-password'
 default.openssh.server.password_authentication = 'no'  
 # default.openssh.server.allow_groups = 'sudo'  
