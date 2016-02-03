@@ -22,7 +22,7 @@ end
 include_recipe 'build-essential'
 include_recipe 'homelan::hosts'
 include_recipe 'homelan::motd'
-include_recipe 'openssh'
+# include_recipe 'openssh'
 
 # include_recipe "chef-client::config"
 # include_recipe "chef-client"
