@@ -4,18 +4,16 @@
 #
 # Copyright (c) 2015 Paul Chicarello
 
-case node[:platform]
-  when "centos"
-    node.rhel_packages.each do |pkg|  
-        package pkg
-    end
+case node[:platform_family]
   when "debian"
+    include_recipe 'apt'
     node.deb_packages.each do |pkg|  
         package pkg
     end
-  when "ubuntu"
-    node.deb_packages.each do |pkg|  
-        package pkg
+  when "rhel", "fedora"
+    include_recipe 'yum-epel'
+    node.rhel_packages.each do |pkg|  
+      package pkg
     end
 end
 
