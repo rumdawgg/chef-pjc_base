@@ -4,14 +4,14 @@ maintainer_email 	'paul@chicarello.com'
 license 			'All rights reserved'
 description 		'Configures a node on the lan.chicarello.com domain'
 long_description 	'Configures a node on the lan.chicarello.com domain'
-version 			'0.1.26'
+version 			'0.1.27'
 
-depends "chef-client"
-depends "users"
-depends "sshd"
-depends "build-essential"
-depends "sudo"
-depends "ssh-keys"
+depends 'chef-client', '~> 4.3.3'
+depends 'users', '~> 2.0.3'
+depends 'openssh', '~> 1.6.1'
+depends 'build-essential', '~> 2.3.1'
+depends 'sudo', '~> 2.9.0'
+depends 'ssh-keys', '~> 1.2.7'
 depends 'rsyslog', '~> 4.0.0'
 depends 'apt', '~> 2.9.2'
 depends 'yum-epel', '~> 0.6.6'
