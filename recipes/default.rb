@@ -24,7 +24,3 @@ include_recipe 'users::sysadmins'
 include_recipe 'sudo'
 include_recipe 'rsyslog::default'
 include_recipe 'openssh'
-
-# include_recipe "chef-client::config"
-# include_recipe "chef-client"
-# include_recipe "chef-client::delete_validation"
