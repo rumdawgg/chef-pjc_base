@@ -13,4 +13,4 @@ suites:
     driver:
       vm_hostname: kitchen.lan.chicarello.com
     run_list:
-      - recipe[homelan::default]
+      - recipe[pjc-base::default]

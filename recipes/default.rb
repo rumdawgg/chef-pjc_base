@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: homelan
+# Cookbook Name:: pjc
 # Recipe:: default
 #
 # Copyright (c) 2015 Paul Chicarello
@@ -18,7 +18,7 @@ case node['platform_family']
 end
 
 include_recipe 'build-essential'
-include_recipe 'homelan::motd'
+include_recipe 'pjc-base::motd'
 include_recipe 'users'
 include_recipe 'users::sysadmins'
 include_recipe 'sudo'
