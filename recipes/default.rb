@@ -25,3 +25,6 @@ include_recipe 'sudo'
 include_recipe 'rsyslog::default'
 include_recipe 'openssh'
 include_recipe 'selinux::permissive' unless Mixlib::ShellOut.new('which getenforce').run_command.error?
+include_recipe 'ntp'
+
+timezone 'UTC'
