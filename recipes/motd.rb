@@ -2,7 +2,8 @@
 # Cookbook Name:: homelan
 # Recipe:: motd
 #
-# Copyright (c) 2015 The Authors, All Rights Reserved.
+# Copyright (c) 2016 Paul Chicarello
+#
 
 chef_gem "artii" do
 	compile_time true

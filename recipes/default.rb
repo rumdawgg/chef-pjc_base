@@ -2,7 +2,8 @@
 # Cookbook Name:: pjc
 # Recipe:: default
 #
-# Copyright (c) 2015 Paul Chicarello
+# Copyright (c) 2016 Paul Chicarello
+#
 
 case node['platform_family']
   when "debian"
