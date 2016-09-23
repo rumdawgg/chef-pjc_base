@@ -1,16 +1,16 @@
 #
-# Cookbook Name:: homelan
+# Cookbook Name:: pjc-base
 # Recipe:: motd
 #
 # Copyright (c) 2016 Paul Chicarello
 #
 
-chef_gem "artii" do
-	compile_time true
+chef_gem 'artii' do
+  compile_time true
 end
 
-require "artii"
+require 'artii'
 
-template "/etc/motd" do
-    source "motd.erb"
+template '/etc/motd' do
+  source 'motd.erb'
 end

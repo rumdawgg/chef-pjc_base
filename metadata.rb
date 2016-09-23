@@ -1,10 +1,12 @@
-name 				      'pjc-base'
-maintainer 			  'Paul Chicarello'
-maintainer_email 	'paul@chicarello.com'
-license 			    'All rights reserved'
-description 		  'Configures a node on the lan.chicarello.com domain'
-long_description 	'Configures a node on the lan.chicarello.com domain'
-version           '0.2.10'
+name 'pjc-base'
+maintainer 'Paul Chicarello'
+maintainer_email 'paul@chicarello.com'
+license 'All rights reserved'
+description 'Configures a node on the lan.chicarello.com domain'
+long_description 'Configures a node on the lan.chicarello.com domain'
+issues_url 'https://github.com/rumdawgg/chef-pjc-base/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/rumdawgg/chef-pjc-base' if respond_to?(:source_url)
+version '0.2.11'
 
 depends 'apt'
 depends 'build-essential'

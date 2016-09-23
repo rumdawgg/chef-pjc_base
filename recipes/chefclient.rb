@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: pjc
+# Cookbook Name:: pjc-base
 # Recipe:: chefclient
 #
 # Copyright (c) 2016 Paul Chicarello
