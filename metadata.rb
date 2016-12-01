@@ -6,7 +6,7 @@ description 'Configures a node on the lan.chicarello.com domain'
 long_description 'Configures a node on the lan.chicarello.com domain'
 issues_url 'https://github.com/rumdawgg/chef-pjc-base/issues' if respond_to?(:issues_url)
 source_url 'https://github.com/rumdawgg/chef-pjc-base' if respond_to?(:source_url)
-version '0.2.11'
+version '0.2.12'
 
 depends 'apt'
 depends 'build-essential'
