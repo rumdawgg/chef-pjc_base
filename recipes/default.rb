@@ -19,7 +19,7 @@ when 'rhel', 'fedora'
 end
 
 include_recipe 'build-essential'
-include_recipe 'pjc-base::motd'
+#include_recipe 'pjc-base::motd'
 include_recipe 'users'
 include_recipe 'users::sysadmins'
 include_recipe 'sudo'
