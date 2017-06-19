@@ -1,35 +1,21 @@
-*.rbc
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
-_Store
+.vagrant
 *~
 *#
 .#*
 \#*#
 .*.sw[a-z]
 *.un~
-*.tmp
-*.bk
-*.bkup
-.chef
 
 # Bundler
 Gemfile.lock
 bin/*
 .bundle/*
 
+# test kitchen
 .kitchen/
 .kitchen.local.yml
 
-#vagrant stuff
-.vagrant/
-.vagrant.d/
-.kitchen/
+# Chef
+Berksfile.lock
+.zero-knife.rb
+Policyfile.lock.json
