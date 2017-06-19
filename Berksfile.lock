@@ -1,10 +1,9 @@
 DEPENDENCIES
-  pjc-base
+  pjc_base
     path: .
     metadata: true
 
 GRAPH
-  apt (6.0.1)
   build-essential (8.0.0)
     mingw (>= 1.1)
     seven_zip (>= 0.0.0)
@@ -24,8 +23,7 @@ GRAPH
   ohai (5.0.2)
   openssh (2.2.0)
     iptables (>= 1.0)
-  pjc-base (0.2.13)
-    apt (>= 0.0.0)
+  pjc_base (0.2.14)
     build-essential (>= 0.0.0)
     chef-client (>= 0.0.0)
     ntp (>= 0.0.0)

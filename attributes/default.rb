@@ -1,9 +1,20 @@
-#
-# Attributes
-#
-
-default['rhel_packages'] = %w(vim git rsync telnet tcpdump postfix wget curl ca-certificates nfs-utils openssh-clients mlocate screen ncurses-term htop tmux)
-default['deb_packages'] = %w(vim git rsync telnet tcpdump postfix wget curl ca-certificates nfs-common mlocate software-properties-common screen)
+default['pjc_base']['useful_packages'] = %w[vim
+                                            git
+                                            rsync
+                                            telnet
+                                            tcpdump
+                                            postfix
+                                            wget
+                                            curl
+                                            ca-certificates
+                                            nfs-utils
+                                            openssh-clients
+                                            mlocate
+                                            screen
+                                            ncurses-term
+                                            htop
+                                            tmux
+                                            yum-utils]
 
 default['build-essential']['compile-time'] = true
 

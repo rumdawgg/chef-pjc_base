@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: pjc-base
+# Cookbook Name:: pjc_base
 # Spec:: default
 #
 # Copyright (c) 2016 Paul Chicarello
@@ -7,7 +7,7 @@
 
 require 'spec_helper'
 
-describe 'pjc-base::default' do
+describe 'pjc_base::default' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new
