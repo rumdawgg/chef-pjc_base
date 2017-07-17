@@ -17,14 +17,18 @@
 # limitations under the License.
 #
 
+include_recipe 'yum'
 include_recipe 'yum-epel'
-include_recipe 'users'
-include_recipe 'users::sysadmins'
 include_recipe 'sudo'
 include_recipe 'rsyslog::default'
 include_recipe 'openssh'
 include_recipe 'selinux::permissive'
 include_recipe 'ntp'
+
+users_manage 'sysadmin' do
+  group_id 2300
+  action [:create]
+end
 
 timezone 'UTC'
 
