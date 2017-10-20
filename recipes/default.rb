@@ -19,18 +19,21 @@
 
 include_recipe 'yum'
 include_recipe 'yum-epel'
+include_recipe 'yum-centos'
 include_recipe 'sudo'
-include_recipe 'rsyslog::default'
+include_recipe 'rsyslog'
+include_recipe 'logrotate::global'
 include_recipe 'openssh'
-include_recipe 'selinux::permissive'
 include_recipe 'ntp'
+
+selinux_state "SELinux Disabled" do
+  action :disabled
+end
 
 users_manage 'sysadmin' do
   group_id 2300
   action [:create]
 end
-
-timezone 'UTC'
 
 node['pjc_base']['useful_packages'].each do |pkg|
   package pkg
