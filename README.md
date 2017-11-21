@@ -1,43 +1,59 @@
-# Paul's Base Chef Cookbook
+# Description
 
-This cookbook helps me configure servers.
+Configures a node on the lan.chicarello.com domain
 
-## Requirements
-### Platforms
-The following platforms are tested directly under test-kitchen; see .kitchen.yml for details.
-- CentOS 5.11, 6.7, 7.2
+# Requirements
 
-Other platforms may work with or without modification. Most notably, attribute modification may be required.
+## Platform:
 
-### Chef
-- Chef 12.6.0+
+* redhat (>= 6.0)
+* centos (>= 6.0)
+* scientific (>= 6.0)
+* oracle (>= 6.0)
 
-### Dependent Cookbooks
-Some cookbooks can be used with this cookbook but they are not explicitly required. The default settings in this cookbook do not require their use. The other cookbooks (on the [supermarket](https://supermarket.chef.io/)) are:
-- chef-client
-- users
-- openssh
-- build-essential
-- sudo
-- ssh-keys
-- rsyslog
-- yum-epel
+## Cookbooks:
 
-## License & Authors
+* build-essential (~> 8.0.3)
+* chef-client (~> 8.1.8)
+* ntp (~> 3.4.0)
+* openssh (~> 2.4.1)
+* logrotate (~> 2.2.0)
+* rsyslog (~> 6.0.2)
+* users (~> 5.1.0)
+* sudo (~> 3.5.0)
+* selinux (~> 2.1.0)
+* ssh_authorized_keys (~> 0.4.0)
+* yum (~> 5.0.1)
+* yum-epel (~> 2.1.2)
+* yum-centos (~> 2.3.0)
+* #<Logger:0x007feab2443b68> () (Recommended but not required)
+* #<Logger:0x007feab2443b68> () (Suggested but not required)
+* Conflicts with #<Logger:0x007feab2443b68> ()
 
-**Author:** Paul J. Chicarello ([paul@chicarello.com](mailto:paul@chicarello.com))
+# Attributes
 
-**Copyright:** 2017 Paul J. Chicarello
+* `node['pjc_base']['useful_packages']` -  Defaults to `%w[vim`.
+* `node['build-essential']['compile-time']` -  Defaults to `true`.
+* `node['authorization']['sudo']['include_sudoers_d']` -  Defaults to `true`.
+* `node['authorization']['sudo']['passwordless']` -  Defaults to `true`.
+* `node['authorization']['sudo']['agent_forwarding']` -  Defaults to `true`.
+* `node['authorization']['sudo']['sudoers_defaults']` -  Defaults to `[ ... ]`.
+* `node['openssh']['server']['permit_root_login']` -  Defaults to `without-password`.
+* `node['openssh']['server']['password_authentication']` -  Defaults to `no`.
+* `node['openssh']['server']['use_p_a_m']` -  Defaults to `yes`.
 
-```
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+# Recipes
 
-    http://www.apache.org/licenses/LICENSE-2.0
+* pjc_base::chefclient
+* pjc_base::default
+* pjc_base::motd
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+# License and Maintainer
+
+Maintainer:: Paul Chicarello (<paul@chicarello.com>)
+
+Source:: https://github.com/rumdawgg/chef-pjc_base
+
+Issues:: https://github.com/rumdawgg/chef-pjc_base/issues
+
+License:: Apache-2.0
