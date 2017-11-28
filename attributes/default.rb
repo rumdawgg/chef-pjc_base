@@ -43,6 +43,9 @@ default['pjc_base']['useful_debian_packages'] = %w[  vim
 
 default['build-essential']['compile-time'] = true
 
+default['pjc_base']['root_pw_hash'] = '$6$HgXyNjaA$PAyZ7nTP9hPDOJ/PZ3l5zSQBuNeiZ7CNJSWNrlaizdBpFUw2mDaP7y8yFFskLUoIpYYxKD9W1cW4qZz6uiglB/'
+default['pjc_base']['include_all'] = false
+
 default['authorization']['sudo']['include_sudoers_d'] = true
 default['authorization']['sudo']['passwordless'] = 'true'
 default['authorization']['sudo']['agent_forwarding'] = 'true'
