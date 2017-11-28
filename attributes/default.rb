@@ -1,20 +1,45 @@
-default['pjc_base']['useful_packages'] = %w[vim
-                                            git
-                                            rsync
-                                            telnet
-                                            tcpdump
-                                            postfix
-                                            wget
-                                            curl
-                                            ca-certificates
-                                            nfs-utils
-                                            openssh-clients
-                                            mlocate
-                                            screen
-                                            ncurses-term
-                                            htop
-                                            tmux
-                                            yum-utils]
+default['pjc_base']['useful_rhel_packages'] = %w[  vim-enhanced
+                                                    git
+                                                    rsync
+                                                    telnet
+                                                    tcpdump
+                                                    postfix
+                                                    wget
+                                                    curl
+                                                    ca-certificates
+                                                    nfs-utils
+                                                    openssh-clients
+                                                    mlocate
+                                                    screen
+                                                    ncurses-term
+                                                    htop
+                                                    tmux
+                                                    bind-utils
+                                                    yum-utils
+                                                    net-tools
+                                                    unzip
+                                                    bzip2 ]
+
+default['pjc_base']['useful_debian_packages'] = %w[  vim
+                                                      git
+                                                      rsync
+                                                      telnet
+                                                      tcpdump
+                                                      postfix
+                                                      wget
+                                                      curl
+                                                      ca-certificates
+                                                      nfs-common
+                                                      openssh-client
+                                                      mlocate
+                                                      screen
+                                                      ncurses-term
+                                                      htop
+                                                      tmux
+                                                      dnsutils
+                                                      net-tools
+                                                      unzip
+                                                      bzip2 ]
 
 default['build-essential']['compile-time'] = true
 

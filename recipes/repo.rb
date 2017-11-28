@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: pjc_base
-# Recipe:: default
+# Recipe:: repo
 #
 # Copyright 2017, Paul Chicarello
 #
@@ -17,15 +17,20 @@
 # limitations under the License.
 #
 
-# at the very least, get chef client running. We can always add more recipes later.
-
-include_recipe 'chef-client'
-
-# and include all other recipes, but only if specified. By default this is false
-if node['pjc_base']['include_all']
-  include_recipe 'pjc_base::auth'
-  include_recipe 'pjc_base::packages'
-  include_recipe 'pjc_base::security'
-  include_recipe 'pjc_base::logging'
-  include_recipe 'pjc_base::time'
+case node['platform_family']
+when 'debian'
+  include_recipe 'apt'
+  case node['platform']
+  when 'ubuntu'
+    include_recipe 'ubuntu'
+  end
+when 'rhel'
+  include_recipe 'yum'
+  include_recipe 'yum-epel'
+  case node['platform']
+  when 'centos'
+    include_recipe 'yum-centos'
+  when 'oracle'
+    include_recipe 'yum-oracle'
+  end
 end

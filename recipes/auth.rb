@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: pjc_base
-# Recipe:: default
+# Cookbook:: pjc_base
+# Recipe:: auth
 #
-# Copyright 2017, Paul Chicarello
+# Copyright:: 2017, Paul Chicarello
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,17 +15,20 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-# at the very least, get chef client running. We can always add more recipes later.
+# Set a strong root password
 
-include_recipe 'chef-client'
-
-# and include all other recipes, but only if specified. By default this is false
-if node['pjc_base']['include_all']
-  include_recipe 'pjc_base::auth'
-  include_recipe 'pjc_base::packages'
-  include_recipe 'pjc_base::security'
-  include_recipe 'pjc_base::logging'
-  include_recipe 'pjc_base::time'
+user 'root' do
+  password node['pjc_base']['root_pw_hash']
 end
+
+# create users who are sysadmins
+
+users_manage 'sysadmin' do
+  action [:create]
+  data_bag 'users'
+end
+
+# and allow them to sudo
+
+include_recipe 'sudo'

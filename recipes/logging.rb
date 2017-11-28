@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: pjc_base
-# Recipe:: default
+# Recipe:: logging
 #
 # Copyright 2017, Paul Chicarello
 #
@@ -17,15 +17,5 @@
 # limitations under the License.
 #
 
-# at the very least, get chef client running. We can always add more recipes later.
-
-include_recipe 'chef-client'
-
-# and include all other recipes, but only if specified. By default this is false
-if node['pjc_base']['include_all']
-  include_recipe 'pjc_base::auth'
-  include_recipe 'pjc_base::packages'
-  include_recipe 'pjc_base::security'
-  include_recipe 'pjc_base::logging'
-  include_recipe 'pjc_base::time'
-end
+include_recipe 'rsyslog'
+include_recipe 'logrotate::global'
