@@ -27,5 +27,4 @@ if node['pjc_base']['include_all']
   include_recipe 'pjc_base::packages'
   include_recipe 'pjc_base::security'
   include_recipe 'pjc_base::logging'
-  include_recipe 'pjc_base::time'
 end

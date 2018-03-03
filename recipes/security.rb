@@ -17,8 +17,6 @@
 # limitations under the License.
 #
 
-include_recipe 'openssh'
-
-selinux_state "SELinux Disabled" do
+selinux_state 'SELinux Disabled' do
   action :disabled
 end
