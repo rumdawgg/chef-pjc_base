@@ -6,7 +6,7 @@ source_url 'https://github.com/rumdawgg/chef-pjc_base'
 license 'Apache-2.0'
 description 'Configures a node on the lan.chicarello.com domain'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '0.3.0'
+version '0.3.1'
 chef_version '>= 12.7' if respond_to?(:chef_version)
 
 supports 'ubuntu', '>= 14.04'
@@ -17,7 +17,6 @@ supports 'redhat'
 depends 'apt', '~> 6.1.4'
 depends 'chef-client', '~> 9.0.0'
 depends 'logrotate', '~> 2.2.0'
-depends 'ntp', '~> 3.5.2'
 depends 'openssh', '~> 2.6.0'
 depends 'rsyslog', '~> 6.0.2'
 depends 'selinux', '~> 2.1.0'

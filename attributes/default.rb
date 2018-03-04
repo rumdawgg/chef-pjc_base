@@ -7,6 +7,7 @@ default['pjc_base']['useful_rhel_packages'] = %w[ vim-enhanced
                                                   wget
                                                   curl
                                                   ca-certificates
+                                                  chrony
                                                   nfs-utils
                                                   mlocate
                                                   screen
@@ -45,9 +46,8 @@ default['pjc_base']['include_all'] = false
 default['logrotate']['global']['compress'] = true
 default['logrotate']['global']['rotate'] = '8'
 default['logrotate']['global']['dateext'] = true
-if node['platform_family'] == 'debian'
-  default['logrotate']['global']['su'] = 'root syslog'
-end
+
+node['platform_family'] == 'debian' && default['logrotate']['global']['su'] = 'root syslog'
 
 default['authorization']['sudo']['passwordless'] = true
 default['authorization']['sudo']['groups'] = %w[sysadmin wheel admin sudo]
