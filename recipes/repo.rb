@@ -27,6 +27,7 @@ when 'debian'
 when 'rhel'
   include_recipe 'yum'
   include_recipe 'yum-epel'
+  include_recipe 'yum-scl' if node['pjc_base']['include_scl_repo']
   case node['platform']
   when 'centos'
     include_recipe 'yum-centos'
