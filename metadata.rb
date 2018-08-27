@@ -6,7 +6,7 @@ source_url 'https://github.com/rumdawgg/chef-pjc_base'
 license 'Apache-2.0'
 description 'Configures a node on the lan.chicarello.com domain'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '0.3.5'
+version '0.3.10'
 chef_version '>= 12.7' if respond_to?(:chef_version)
 
 supports 'ubuntu', '>= 14.04'
