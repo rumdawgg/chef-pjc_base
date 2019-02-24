@@ -2,7 +2,7 @@
 # Cookbook Name:: pjc_base
 # Recipe:: default
 #
-# Copyright 2017, Paul Chicarello
+# Copyright 2018, Paul Chicarello
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,6 +20,8 @@
 # at the very least, get chef client running. We can always add more recipes later.
 
 include_recipe 'chef-client'
+include_recipe 'chef-client::config'
+include_recipe 'chef-client::delete_validation'
 
 # and include all other recipes, but only if specified. By default this is false
 if node['pjc_base']['include_all']

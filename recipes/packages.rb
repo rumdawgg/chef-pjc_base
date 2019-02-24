@@ -2,7 +2,7 @@
 # Cookbook Name:: pjc_base
 # Recipe:: packages
 #
-# Copyright 2017, Paul Chicarello
+# Copyright 2018, Paul Chicarello
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,13 +19,17 @@
 
 include_recipe 'pjc_base::repo'
 
-case node["platform_family"]
-when "debian"
+case node['platform_family']
+when 'debian'
   node['pjc_base']['useful_debian_packages'].each do |pkg|
-    package pkg
+    package pkg do
+      action :upgrade
+    end
   end
-when "rhel"
+when 'rhel'
   node['pjc_base']['useful_rhel_packages'].each do |pkg|
-    package pkg
+    package pkg do
+      action :upgrade
+    end
   end
 end

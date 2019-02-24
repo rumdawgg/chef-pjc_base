@@ -2,7 +2,7 @@
 # Cookbook Name:: pjc_base
 # Recipe:: logging
 #
-# Copyright 2017, Paul Chicarello
+# Copyright 2018, Paul Chicarello
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

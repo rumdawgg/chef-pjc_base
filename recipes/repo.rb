@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: pjc_base
+# Cookbook:: pjc_base
 # Recipe:: repo
 #
-# Copyright 2017, Paul Chicarello
+# Copyright:: 2018, Paul Chicarello
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 case node['platform_family']
 when 'debian'
@@ -27,11 +26,8 @@ when 'debian'
 when 'rhel'
   include_recipe 'yum'
   include_recipe 'yum-epel'
-  include_recipe 'yum-scl' if node['pjc_base']['include_scl_repo']
   case node['platform']
   when 'centos'
     include_recipe 'yum-centos'
-  when 'oracle'
-    include_recipe 'yum-oracle'
   end
 end
